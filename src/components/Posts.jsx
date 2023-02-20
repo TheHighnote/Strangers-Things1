@@ -6,7 +6,7 @@ const postsView = (props) => {
 
     const post= props.post 
 
-    return {
+    return (
 
         
         <>
@@ -18,7 +18,7 @@ const postsView = (props) => {
             <h3 id="location">{`${post.location}`}</h3>
         </div>
         </>
-    }
+    )
 }
 
 export default postsView
