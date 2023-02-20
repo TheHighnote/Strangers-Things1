@@ -14,8 +14,8 @@ const postList = (props) => {
                 return (
                     <Post posts = {posts} key={`postList:${idx}`}/>
                 )
-                
-            }) :null}
+
+            }) }null:
 
 
         </div>
