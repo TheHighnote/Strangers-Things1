@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
-import { Navbar } from "./";
+import { Navbar, postsView } from "./";
 import getPosts from "../API-Adapt";
+import PostList from "./PostList";
 
 const Main = () => {
     const [posts, setPosts] = useState([])
@@ -19,6 +20,7 @@ const Main = () => {
     return(
         <div id="main">
             <Navbar />
+            <PostList posts={posts}/>
         </div>
     )
 }
