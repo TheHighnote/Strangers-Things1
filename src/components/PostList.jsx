@@ -1,19 +1,13 @@
 import React from "react";
 
-import { postsView } from "./Posts"
+import PostsView  from "./Posts"
 
-const PostList = (props) => {
-
-    const postList = props.postList 
-
+const PostList = ({posts}) => {
+    console.log("posts", posts)
     return(
         <div id="posts-list">
-
-            {postList.map((posts, idx) => {
-                
-                return <postsView posts={posts} key={`PostList:${idx}`}/>
-                
-
+            {posts?.map(post => {
+                return <PostsView post={post} key={post._id}/>
             })}
 
         </div>)

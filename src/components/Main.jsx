@@ -9,7 +9,7 @@ const Main = () => {
     async function retrievePosts () {
         const myPosts = await getPosts()
         setPosts (myPosts.data.posts)
-        console.log(myPosts)
+        console.log("myposts", myPosts)
 
     }
     useEffect(() => {
