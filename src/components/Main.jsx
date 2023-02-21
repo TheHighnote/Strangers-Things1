@@ -18,9 +18,9 @@ const Main = () => {
         retrievePosts()
     }, [])
 
-    // if (!token) {
-    //     return <Login setToken={setToken} />
-    // }
+    if (!token) {
+       return <Login setToken={setToken} />
+    }
 
     return(
         <div id="main">

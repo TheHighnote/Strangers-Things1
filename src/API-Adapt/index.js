@@ -21,5 +21,5 @@ const url = "https://strangers-things.herokuapp.com/api/2301-ftb-et-web-ft/"
     }
 }
 
-// export default {getPosts, getRegistered};
-export default getPosts
+export default { getPosts, getRegistered };
+// export default getPosts
