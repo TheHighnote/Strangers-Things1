@@ -1,5 +1,4 @@
 import React from "react";
-
 import PostsView  from "./Posts"
 
 const PostList = ({posts}) => {
