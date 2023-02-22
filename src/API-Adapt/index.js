@@ -54,3 +54,20 @@ export const loginUser = async (username, password) => {
     }
 }
 
+export const fetchMe = async () => {
+    const token = localStorage.getItem("token");
+    try {
+      const response = await fetch(`${url}users/me`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    const user = await response.json();
+    return user;
+  } catch (error) {
+    console.error(error);
+  }
+};
