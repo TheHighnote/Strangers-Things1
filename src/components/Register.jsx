@@ -7,7 +7,7 @@ export function Register({setToken}) {
     const [password, setPassword]= useState("");
     const [confirmPassword, setConfirmPassword]= useState("")
     const location = useLocation();
-    const comparePasswords = (usename, password, confirmPassword) => {
+    const comparePasswords = (username, password, confirmPassword) => {
         if (password !== confirmPassword) {
             alert('Passwords do not match!');
             return false;
