@@ -55,7 +55,7 @@ export function Register({setToken}) {
                 placeholder="Confirm Password" 
                 required
                 onChange={(e)=>setConfirmPassword(e.target.value)}/></label>
-                <button type="submit">Submit</button>
+                <button type="submit" className="primary-button">Submit</button>
             </form>
         </div>
     )

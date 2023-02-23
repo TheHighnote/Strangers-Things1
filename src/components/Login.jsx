@@ -39,7 +39,7 @@ export function Login({setToken}) {
             />
             </label> 
             <div>
-                <button type = "submit" >Log in</button>
+                <button type = "submit" className="primary-button">Log in</button>
             </div>
         </form>
 

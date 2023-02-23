@@ -4,10 +4,15 @@ body {
 
 #navbar {
     background-color: black;
+    font-size: 25px;
     color: white;
     display: flex;
     align-items: center;
     flex-grow: 1;
     max-height: 10%;
     min-height: 40px;
+}
+#post-view{
+    margin: 3px;
+    border: solid 2px black
 }
