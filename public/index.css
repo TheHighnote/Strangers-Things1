@@ -33,7 +33,7 @@ body {
     margin-top: 50px;
     border: solid #1e0707 2px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px 1e0707;
+    box-shadow: 10px 10px 5px #1e0707;
     width:178px;
     padding:10px;
     background-color: #ff1515;
@@ -48,7 +48,7 @@ body {
     margin-top: 50px;
     border: solid #1e0707 2px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px 1e0707;
+    box-shadow: 10px 10px 5px #1e0707;
     width: 148px;
     padding:10px;
     background-color: #ff1515;
@@ -63,7 +63,7 @@ body {
     margin-top: 50px;
     border: solid #1e0707 2px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px 1e0707;
+    box-shadow: 10px 10px 5px #1e0707;
     width:148px;
     padding:10px;
     background-color: #ff1515;  
