@@ -1,12 +1,12 @@
 *{
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Gloock;
 }
 body {
     margin: 0;
 }
 
 #navbar {
-    background-color: black;
+    background-color: #1e0707;
     font-size: 25px;
     color: white;
     display: flex;
@@ -17,34 +17,40 @@ body {
 }
 #post-view{
     margin: 3px;
-    border: solid 2px black
+    border: solid 2px black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px black;
+    padding:10px;
+    margin-bottom: 20px;
 }
 #login{
-display: flex;
-margin-left: auto;
-margin-right: auto;
-flex-direction: column;
-align-content: center;
-margin-top: 50px;
-border: solid black 2px;
-border-radius: 20px;
-width: 50%;
-padding:10px;
-background-color: yellow;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    border: solid #1e0707 2px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px black;
+    width:178px;
+    padding:10px;
+    background-color: #ff1515;
 }
 
 #register{
-display: flex;
-margin-left: auto;
-margin-right: auto;
-flex-direction: column;
-align-content: center;
-margin-top: 50px;
-border: solid black 2px;
-border-radius: 20px;
-width: 171px;
-padding:10px;
-background-color: yellow;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    border: solid #1e0707 2px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px black;
+    width: 148px;
+    padding:10px;
+    background-color: #ff1515;
 }
 
 #new-post{
@@ -54,13 +60,21 @@ background-color: yellow;
     flex-direction: column;
     align-content: center;
     margin-top: 50px;
-    border: solid black 2px;
+    border: solid #1e0707 2px;
     border-radius: 20px;
-    width: 200px;
+    box-shadow: 10px 10px 5px black;
+    width:148px;
     padding:10px;
-    background-color: yellow;  
+    background-color: #ff1515;  
 }
 #title{
     text-decoration: none;
     text-align: center;
+    color: #ff1515;
+    
+}
+#nav-buttons{
+    display:flex;
+    margin-left:auto;
+    margin-right: 10px;
 }
