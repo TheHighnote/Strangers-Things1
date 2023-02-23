@@ -73,9 +73,10 @@ export const fetchMe = async () => {
     console.error(error);
   }
 };
-export const createPost = async (id, title, description, price) => {
+export const createPost = async (id, title, description, price, location, willDeliver) => {
     try {
       const response = await fetch(`${url}/posts/${id}`, {
+        method: "POST",
         headers: {
           "content-type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -85,9 +86,13 @@ export const createPost = async (id, title, description, price) => {
             title: title,
             description: description,
             price: price,
+            location: location,
+            willDeliver: willDeliver
           }
         })
       })
+      const result = await response.json()
+      return result
     } catch (error) {
       console.log(error);
     }

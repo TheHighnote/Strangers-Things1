@@ -2,8 +2,7 @@ import React, {useState, useEffect} from "react";
 import {getPosts} from "../API-Adapt";
 import PostList from "./PostList";
 
-const Main = () => {
-    const [posts, setPosts] = useState([])
+const Main = ({posts, setPosts}) => {
 
     
     async function retrievePosts () {

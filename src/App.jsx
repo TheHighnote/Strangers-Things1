@@ -6,7 +6,9 @@ import { fetchMe } from "./API-Adapt";
 
 function App() {
     const [user, setUser] = useState({});
-    const [setToken] = useState({});
+    const [token, setToken] = useState({});
+    const [posts, setPosts] = useState([])
+
     useEffect (() => {
         if (Object.keys(user).length === 0) {
             const getMe = async () => {
@@ -21,7 +23,7 @@ function App() {
 
     return (<div className="App">
         <Navbar user={user} />
-        <AllRoutes setToken={setToken} user={user} />
+        <AllRoutes posts={posts} setPosts={setPosts}token={token} setToken={setToken} user={user} />
     </div>
     );
 }

@@ -16,4 +16,3 @@ ReactDOM.createRoot(document.getElementById('app')).render(
     </React.StrictMode>
   )
 
-// root.render(<Main/>);
