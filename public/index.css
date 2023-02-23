@@ -7,8 +7,7 @@ body {
 
 #navbar {
     background-color: #1e0707;
-    font-size: 25px;
-    color: white;
+    font-size: 25px;  
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -16,10 +15,10 @@ body {
     min-height: 40px;
 }
 #post-view{
-    margin: 3px;
-    border: solid 2px black;
+    margin: 15px;
+    border: solid 2px #1e0707;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 10px 10px 5px #1e0707;
     padding:10px;
     margin-bottom: 20px;
 }
@@ -32,7 +31,7 @@ body {
     margin-top: 50px;
     border: solid #1e0707 2px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 10px 10px 5px 1e0707;
     width:178px;
     padding:10px;
     background-color: #ff1515;
@@ -47,7 +46,7 @@ body {
     margin-top: 50px;
     border: solid #1e0707 2px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 10px 10px 5px 1e0707;
     width: 148px;
     padding:10px;
     background-color: #ff1515;
@@ -62,7 +61,7 @@ body {
     margin-top: 50px;
     border: solid #1e0707 2px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 10px 10px 5px 1e0707;
     width:148px;
     padding:10px;
     background-color: #ff1515;  
@@ -71,7 +70,10 @@ body {
     text-decoration: none;
     text-align: center;
     color: #ff1515;
-    
+    margin-left: 10px;
+}
+#title:hover{
+    color: #b30d0d;
 }
 #nav-buttons{
     display:flex;
