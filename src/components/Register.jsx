@@ -30,7 +30,8 @@ export function Register({setToken}) {
                     
                 }
             }}>
-                <label>Create Account
+                <div id="register">
+                <label>Username:
                 <input 
                 value={username} 
                 minLength={4} 
@@ -40,6 +41,7 @@ export function Register({setToken}) {
                 required 
                 onChange={(e)=>setUsername(e.target.value)}/></label>
               <label>
+                Password:
                 <input 
                 value={password} 
                 minLength={8} 
@@ -48,6 +50,7 @@ export function Register({setToken}) {
                 required
                 onChange={(e)=>setPassword(e.target.value)}/></label>
               <label>
+                Confirm: 
                 <input 
                 value={confirmPassword} 
                 minLength={8} 
@@ -55,7 +58,8 @@ export function Register({setToken}) {
                 placeholder="Confirm Password" 
                 required
                 onChange={(e)=>setConfirmPassword(e.target.value)}/></label>
-                <button type="submit" className="primary-button">Submit</button>
+                <button type="submit">Create Account</button>
+            </div>
             </form>
         </div>
     )

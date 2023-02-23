@@ -1,3 +1,6 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
 body {
     margin: 0;
 }
@@ -15,4 +18,49 @@ body {
 #post-view{
     margin: 3px;
     border: solid 2px black
+}
+#login{
+display: flex;
+margin-left: auto;
+margin-right: auto;
+flex-direction: column;
+align-content: center;
+margin-top: 50px;
+border: solid black 2px;
+border-radius: 20px;
+width: 50%;
+padding:10px;
+background-color: yellow;
+}
+
+#register{
+display: flex;
+margin-left: auto;
+margin-right: auto;
+flex-direction: column;
+align-content: center;
+margin-top: 50px;
+border: solid black 2px;
+border-radius: 20px;
+width: 171px;
+padding:10px;
+background-color: yellow;
+}
+
+#new-post{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    border: solid black 2px;
+    border-radius: 20px;
+    width: 200px;
+    padding:10px;
+    background-color: yellow;  
+}
+#title{
+    text-decoration: none;
+    text-align: center;
 }

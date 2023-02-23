@@ -18,6 +18,7 @@ export function Login({setToken}) {
                 console.error(error)
             }
         }}>
+           <div id="login" >
            <label>
             Username:
             <input
@@ -40,6 +41,7 @@ export function Login({setToken}) {
             </label> 
             <div>
                 <button type = "submit" className="primary-button">Log in</button>
+            </div>
             </div>
         </form>
 

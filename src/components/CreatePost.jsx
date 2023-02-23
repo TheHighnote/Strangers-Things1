@@ -22,6 +22,7 @@ const CreatePost = ({token, posts, setPosts}) => {
     }
     return (
       <form onSubmit={handleSubmit}>
+        <div id="new-post">
         <label>
           Title:
           <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
@@ -43,6 +44,7 @@ const CreatePost = ({token, posts, setPosts}) => {
         <input type="checkbox" checked={willDeliver} onChange={e => setWillDeliver(e.target.checked)} />
         </label>
         <button type="submit">Create Post</button>
+        </div>
       </form>
      );
   }
