@@ -1,10 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Main } from "./components";
-import AllRoutes from "./components/Routes";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
-const container = document.getElementById("app");
-const root = ReactDOM.createRoot(container);
+// const root = document.getElementById("app");
+// const root = ReactDOM.createRoot(document.getElementById('app'));
 
-root.render(<Main/>);
-// root.render(<AllRoutes/>);
+ReactDOM.createRoot(document.getElementById('app')).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  )
+
+// root.render(<Main/>);

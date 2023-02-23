@@ -6,11 +6,7 @@ import {Login} from "./Login";
 
 const Main = () => {
     const [posts, setPosts] = useState([])
-    const [token, setToken] = useState()
 
-    if (!token) {
-       return <Login setToken={setToken} />
-    }
     
     async function retrievePosts () {
         const myPosts = await getPosts()
@@ -20,15 +16,11 @@ const Main = () => {
     }
     useEffect(() => {
         retrievePosts()
-        if (!token) {
-           return <Login setToken={setToken} />
-        }
     }, [])
 
 
     return(
         <div id="main">
-            <Navbar />
             <PostList posts={posts}/>
         </div>
     )

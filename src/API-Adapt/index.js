@@ -26,6 +26,7 @@ const url = "https://strangers-things.herokuapp.com/api/2301-ftb-et-web-ft/"
         })
     })
         const {result} = await response.json();
+        console.log(result)
         return result.token
     } catch (error) {
         console.error(error)
@@ -48,7 +49,8 @@ export const loginUser = async (username, password) => {
         })
     })
         const {result} = await response.json();
-        return result.token
+        console.log(result)
+        return result
     } catch (error) {
         console.error(error)
     }

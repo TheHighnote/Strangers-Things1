@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div id="navbar">
-      <h2> Stranger's Things</h2>
+      <Link to={"/"}><h2> Stranger's Things</h2></Link>
+      <Link to={"/Login"}><button>Login</button></Link>
+      <Link to={"/Register"}><button>Register</button></Link>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 
 const PostsView = ({post}) => {
 
-    console.log("postsview", post)
+    // console.log("postsview", post)
     return (
         <>
         <div id="post-view">
