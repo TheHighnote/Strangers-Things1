@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from "react";
-import { Navbar, postsView } from "./";
 import {getPosts} from "../API-Adapt";
 import PostList from "./PostList";
-import {Login} from "./Login";
 
 const Main = () => {
     const [posts, setPosts] = useState([])

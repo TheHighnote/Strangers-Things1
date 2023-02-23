@@ -73,3 +73,22 @@ export const fetchMe = async () => {
     console.error(error);
   }
 };
+export const createPost = async (id, title, description, price) => {
+    try {
+      const response = await fetch(`${url}/posts/${id}`, {
+        headers: {
+          "content-type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({
+          post: {
+            title: title,
+            description: description,
+            price: price,
+          }
+        })
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  };
