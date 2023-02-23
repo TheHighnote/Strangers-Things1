@@ -15,6 +15,8 @@ body {
     min-height: 40px;
 }
 #post-view{
+    background-color: #1e193c;
+    color: white;
     margin: 15px;
     border: solid 2px #1e0707;
     border-radius: 20px;
