@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { createPost } from "../API-Adapt";
 
 
@@ -8,13 +9,14 @@ const CreatePost = ({token, posts, setPosts}) => {
     const [price, setPrice] = useState('');
     const [location, setLocation] = useState('');
     const [willDeliver, setWillDeliver] = useState(false)
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const newPost = await createPost(title, description, price, location, willDeliver)
             console.log("newPost:", newPost)
             const updatedPosts = setPosts([...posts, newPost])
-            console.log(updatedPosts)
+            navigate('/')
             return(updatedPosts)
         } catch (error) {
             console.error(error)

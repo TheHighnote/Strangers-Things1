@@ -1,8 +1,9 @@
 import React from "react";
+import { deletePost } from "../API-Adapt";
 
 
-const PostsView = ({post}) => {
-
+const PostsView = ({post, posts, setPosts}) => {
+    const handleDelete = (id) => {deletePost(id, {setPosts, posts})}
     return (
         <>
         <div id="post-view">
@@ -10,9 +11,14 @@ const PostsView = ({post}) => {
             <h3 id="description">{post.description}</h3>
             <h3 id="price">Price: {post.price}</h3>
             <h3 id="location">Location: {post.location}</h3>
+            {post.isAuthor ? (
+                <button onClick={() => handleDelete(post._id)}>Delete</button>
+                ):null
+                }
         </div>
         </>
     );
 }
+
 
 export default PostsView

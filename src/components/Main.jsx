@@ -18,7 +18,7 @@ const Main = ({posts, setPosts}) => {
 
     return(
         <div id="main">
-            <PostList posts={posts}/>
+            <PostList posts={posts} setPosts={setPosts}/>
         </div>
     )
 }

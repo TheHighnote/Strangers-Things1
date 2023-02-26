@@ -1,7 +1,13 @@
 const url = "https://strangers-things.herokuapp.com/api/2301-ftb-et-web-ft/"
  export const getPosts = async () => {
     try {
-        const response = await fetch(`${url}posts`)
+        const token = localStorage.getItem("token");
+        const response = await fetch(`${url}posts`, {
+
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         const result = await response.json();
         return result
@@ -73,13 +79,14 @@ export const fetchMe = async () => {
     console.error(error);
   }
 };
-export const createPost = async (id, title, description, price, location, willDeliver) => {
+export const createPost = async (title, description, price, location, willDeliver) => {
     try {
-      const response = await fetch(`${url}/posts/${id}`, {
+      const token = localStorage.getItem("token")
+      const response = await fetch(`${url}posts`, {
         method: "POST",
         headers: {
-          "content-type": "application/json",
-          'Authorization': `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
           post: {
@@ -99,13 +106,14 @@ export const createPost = async (id, title, description, price, location, willDe
     }
   };
 
-  const deletePost = async () => {
+  export const deletePost = async (id) => {
     try {
+      const token = localStorage.getItem("token")
       const response = await fetch(`${url}/posts/${id}`, {
         method: "DELETE",
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${TOKEN_STRING_HERE}`
+          'Authorization': `Bearer ${token}`,
         }
       });
       const result = await response.json();
