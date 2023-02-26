@@ -9,6 +9,7 @@ const Navbar = () => {
       <Link to={"/Login"}><button>Log in</button></Link>
       <Link to={"/Register"}><button>Sign up</button></Link>
       <Link to={"/CreatePost"}><button>New Post</button></Link>
+      <Link to={"/Messages"}><button>Me</button></Link>
       </div>
     </div>
   );

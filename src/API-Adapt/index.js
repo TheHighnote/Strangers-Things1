@@ -79,7 +79,7 @@ export const createPost = async (id, title, description, price, location, willDe
         method: "POST",
         headers: {
           "content-type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          'Authorization': `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({
           post: {
@@ -92,8 +92,26 @@ export const createPost = async (id, title, description, price, location, willDe
         })
       })
       const result = await response.json()
+      console.log(result);
       return result
     } catch (error) {
       console.log(error);
     }
   };
+
+  const deletePost = async () => {
+    try {
+      const response = await fetch(`${url}/posts/${id}`, {
+        method: "DELETE",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${TOKEN_STRING_HERE}`
+        }
+      });
+      const result = await response.json();
+      console.log(result);
+      return result
+    } catch (error) {
+      console.error(error);
+    }
+  }
