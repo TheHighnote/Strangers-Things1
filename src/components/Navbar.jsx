@@ -19,6 +19,7 @@ const Navbar = ({user, setUser, token, setToken}) => {
           <div>
           <b id="welcome">Welcome, {user?.data?.username}!</b>
           <Link to={"/CreatePost"}><button>New Post</button></Link>
+          <Link to={"/MyPosts"}><button>My Listings</button></Link>
           <Link to={"/Messages"}><button>Messages</button></Link>
           <button type="button" onClick={() => {handleSignOut()}}>Sign Out</button>
           </div>
