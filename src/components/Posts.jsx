@@ -1,9 +1,11 @@
 import React from "react";
 import { deletePost } from "../API-Adapt";
 
-
 const PostsView = ({post, posts, setPosts}) => {
-    const handleDelete = (id) => {deletePost(id, {setPosts, posts})}
+    const handleDelete = (id) => {
+        deletePost(id, {setPosts, posts})
+        setPosts(posts.filter(post => post._id !== id));
+}
     return (
         <>
         <div id="post-view">
