@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navbar, Main } from "./components";
+import { Navbar } from "./components";
 import AllRoutes from "./components/Routes";
 import "./App.css";
 import { fetchMe } from "./API-Adapt";
@@ -22,7 +22,7 @@ function App() {
     }, [user])
 
     return (<div className="App">
-        <Navbar user={user} />
+        <Navbar user={user} token={token} setUser={setUser} setToken={setToken}/>
         <AllRoutes posts={posts} setPosts={setPosts}token={token} setToken={setToken} user={user} />
     </div>
     );

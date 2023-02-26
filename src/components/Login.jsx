@@ -5,7 +5,7 @@ import {useLocation} from "react-router-dom"
 export function Login({setToken}) {
     const [username, setUsername]= useState("")
     const [password, setPassword]= useState("")
-    // const location = useLocation();
+    const location = useLocation();
 
     return (
         <form className="login" onSubmit={async(e)=>{
@@ -14,6 +14,7 @@ export function Login({setToken}) {
              const token = await loginUser(username,password)
              setToken(token)
              localStorage.setItem("token",token) 
+             location.pathname='/'
             } catch (error) {
                 console.error(error)
             }

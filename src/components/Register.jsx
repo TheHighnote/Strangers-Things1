@@ -22,7 +22,7 @@ export function Register({setToken}) {
                    e.preventDefault();
                    if (comparePasswords(username, password, confirmPassword)) {
                     const token = await registerUser(username, password)
-                    setToken(tokem);
+                    setToken(token);
                     localStorage.setItem("token",token);
                     location.pathname = '/';
                    }
