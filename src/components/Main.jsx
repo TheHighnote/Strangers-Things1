@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {getPosts} from "../API-Adapt";
 import PostList from "./PostList";
 
+
 const Main = ({posts, setPosts}) => {
 
     

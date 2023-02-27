@@ -18,8 +18,6 @@ const Navbar = ({user, setUser, token, setToken}) => {
         {checkUserLoggedIn()?
           <div>
           <b id="welcome">Welcome, {user?.data?.username}!</b>
-          <input id="search" type="text" placeholder="search listings..."/>
-          <br/>
           <Link to={"/CreatePost"}><button>New Post</button></Link>
           <Link to={"/MyPosts"}><button>My Listings</button></Link>
           <Link to={"/Messages"}><button>Messages</button></Link>
