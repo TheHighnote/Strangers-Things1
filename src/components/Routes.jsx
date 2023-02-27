@@ -5,6 +5,7 @@ import { Login } from "./Login";
 import { Register } from "./Register";
 import CreatePost from "./CreatePost"
 import MyPosts from "./MyPosts";
+import EditPost from "./EditPost"
 
 const AllRoutes = ({posts, setPosts, setToken, token}) => {
     return (
@@ -15,6 +16,7 @@ const AllRoutes = ({posts, setPosts, setToken, token}) => {
                 <Route path="/register" element={<Register setToken={setToken}/>}></Route>
                 <Route path="/CreatePost" element={<CreatePost posts={posts} setPosts={setPosts} token={token}/>}></Route>
                 <Route path="/MyPosts" element={<MyPosts />}></Route>
+                <Route path="/EditPost" element={<EditPost />}></Route>
             </Routes>
         </div>
     )

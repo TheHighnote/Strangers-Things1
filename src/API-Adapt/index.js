@@ -123,3 +123,29 @@ export const createPost = async (title, description, price, location, willDelive
       console.error(error);
     }
   }
+
+  export const editPost = async (title, description, price, location, willDeliver) => {
+    try {
+      const response = await fetch(`${url}posts/${_id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({
+          post: {
+            title: title,
+            description: description,
+            price: price,
+            location: location,
+            willDeliver: willDeliver
+          }
+        })
+      })
+      const result = await response.json()
+      console.log(result);
+      return result
+    } catch (error) {
+      console.log(error);
+    }
+  };
