@@ -72,7 +72,9 @@ body {
     text-decoration: none;
     text-align: center;
     color: #ff1515;
+    text-shadow: 10px 10px 5px #390303;
     margin-left: 10px;
+    margin-right: 10px;
 }
 #title:hover{
     color: #b30d0d;
@@ -84,7 +86,10 @@ body {
 }
 
 #welcome{
-    color: white;
-    margin-right: 20px;
-    margin-left: 20px;
+    color: white; 
+    display: flex;
+    justify-content: center; 
+}
+#search{
+    width: 290px;px;
 }
