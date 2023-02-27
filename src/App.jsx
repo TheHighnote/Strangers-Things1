@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "./components";
 import AllRoutes from "./components/Routes";
-import "./App.css";
 import { fetchMe } from "./API-Adapt";
 
 function App() {

@@ -94,3 +94,41 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+.solo-message{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+    border: solid #1e0707 2px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #1e0707;
+    width: 500px;
+    height: auto;
+    padding:10px;
+    background-color: #1e193c;
+}
+.messageForm{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+    border: solid #1e0707 2px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #1e0707;
+    width: 300px;
+    height: auto;
+    padding:10px;
+    background-color: #1e193c;
+}
+h2{
+    color: #ff1515;
+    text-shadow: 10px 10px 5px rgba(255, 21, 21, .3);
+}

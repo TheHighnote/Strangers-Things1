@@ -13,11 +13,12 @@ const EditPost = ({token, posts, setPosts}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const newPost = await editPost(newTitle, newDescription, newPrice, newLocation, newWillDeliver)
+            const newPost = await editPost(token, newTitle, newDescription, newPrice, newLocation, newWillDeliver)
             console.log("newPost:", newPost)
-            const updatedPosts = setPosts([...posts, newPost])
+            console.log(posts)
+            setPosts([...posts, newPost])
             navigate('/')
-            return(updatedPosts)
+            
         } catch (error) {
             console.error(error)
         }

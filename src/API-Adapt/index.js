@@ -106,25 +106,8 @@ export const createPost = async (title, description, price, location, willDelive
     }
   };
 
-  export const deletePost = async (id) => {
-    try {
-      const token = localStorage.getItem("token")
-      const response = await fetch(`${url}/posts/${id}`, {
-        method: "DELETE",
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        }
-      });
-      const result = await response.json();
-      console.log(result);
-      return result
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  export const editPost = async (title, description, price, location, willDeliver) => {
+  
+  export const editPost = async (title, description, price, location, willDeliver, _id) => {
     try {
       const response = await fetch(`${url}posts/${_id}`, {
         method: "PATCH",
@@ -149,3 +132,30 @@ export const createPost = async (title, description, price, location, willDelive
       console.log(error);
     }
   };
+  
+  export const deletePost = async (id) => {
+    try {
+      const token = localStorage.getItem("token")
+      const response = await fetch(`${url}/posts/${id}`, {
+        method: "DELETE",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        }
+      });
+      const result = await response.json();
+      console.log(result);
+      return result
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  export const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const token = localStorage.getItem("token")
+    } catch (error) {
+        
+    }
+}

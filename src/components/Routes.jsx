@@ -6,8 +6,10 @@ import { Register } from "./Register";
 import CreatePost from "./CreatePost"
 import MyPosts from "./MyPosts";
 import EditPost from "./EditPost"
+import Messages from "./Messages"
+import MessagePosts from "./MessagePosts"
 
-const AllRoutes = ({posts, setPosts, setToken, token}) => {
+const AllRoutes = ({posts, setPosts, setToken, token, user}) => {
     return (
         <div>
             <Routes>
@@ -16,7 +18,9 @@ const AllRoutes = ({posts, setPosts, setToken, token}) => {
                 <Route path="/register" element={<Register setToken={setToken}/>}></Route>
                 <Route path="/CreatePost" element={<CreatePost posts={posts} setPosts={setPosts} token={token}/>}></Route>
                 <Route path="/MyPosts" element={<MyPosts />}></Route>
-                <Route path="/EditPost" element={<EditPost />}></Route>
+                <Route path="/EditPost" element={<EditPost posts={posts} setPosts={setPosts} token={token}/>}></Route>
+                <Route path="/MessagePosts" element={<MessagePosts />}></Route>
+                <Route path="/Messages" element={<Messages user={user}/>}></Route>
             </Routes>
         </div>
     )

@@ -1,6 +1,8 @@
 import React from "react";
 import { deletePost } from "../API-Adapt";
-import { Link, useLocation } from "react-router-dom";
+import MessagePosts from "./MessagePosts";
+import { Link } from "react-router-dom";
+import { checkUserLoggedIn } from "./Login";
 
 
 const PostsView = ({post, posts, setPosts}) => {
@@ -18,13 +20,17 @@ const PostsView = ({post, posts, setPosts}) => {
             {post.isAuthor ? (
                 <div>
                     <button onClick={() => handleDelete(post._id)}>Delete</button>
-                    <Link to="/EditPost"><button>Edit Post</button></Link>
+                    <Link to="/EditPost"><button>Edit Post</button></Link> 
                 </div>
-                ):null
+                ):  checkUserLoggedIn() ? (
+                    <Link to="/MessagePosts" state={{ id: post._id }}>
+                    <button type="button">Send Message</button>
+                    </Link>) :
+                    <div></div>
                 }
         </div>
         </>
-    );
+    )
 }
 
 
