@@ -19,7 +19,7 @@ const PostList = ({posts, setPosts}) => {
           <input className="search-bar" type="text" placeholder="Search Listings..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)}></input>  
             {postsToDisplay?.map(post => {
                 return <PostsView post={post} posts={posts} setPosts={setPosts} key={post._id}/>
-                        <EditPost token={token} posts={posts} setPosts={setPosts}/>
+                        
             })}
 
         </div>)
